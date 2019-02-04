@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".graph.GraphActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_anchor="@id/et_polynomial"
+        android:layout_gravity="bottom"
+        app:layout_anchorGravity="bottom|right">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_clear"
+            style="@style/FabStyle"
+            app:backgroundTint="#74D33A7C"
+            app:srcCompat="@drawable/ic_clear"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_draw"
+            style="@style/FabStyle"
+            app:backgroundTint="#742D6BB1"
+            app:srcCompat="@drawable/ic_play"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/enter_polynomial"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/et_polynomial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/polynomial_example"/>
+
+        <com.mvp.fractal.hadar.danny.monom.graph.GraphView
+            android:id="@+id/graph_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
